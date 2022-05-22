@@ -66,6 +66,7 @@ dependencies {
             deps.coroutines,
             deps.gsonConverter
     )
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
 
     kapt(
             deps.glide.compiler,

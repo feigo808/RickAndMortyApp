@@ -1,6 +1,9 @@
 package com.feiyatsu.rickandmortyapp.di
 
 import com.feiyatsu.rickandmortyapp.BuildConfig
+import com.feiyatsu.rickandmortyapp.network.api.CharactersApi
+import com.feiyatsu.rickandmortyapp.network.repository.CharactersRepositoryContract
+import com.feiyatsu.rickandmortyapp.repository.CharactersRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,4 +24,14 @@ object AppModule {
             .baseUrl(API_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+
+    @Singleton
+    @Provides
+    fun providesCharacterApi(retrofit: Retrofit): CharactersApi =
+        retrofit.create(CharactersApi::class.java)
+
+    @Singleton
+    @Provides
+    fun providesCharactersRepository(charactersApi: CharactersApi): CharactersRepositoryContract =
+        CharactersRepository(charactersApi)
 }
