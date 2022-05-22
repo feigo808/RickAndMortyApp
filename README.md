@@ -3,6 +3,7 @@
 # Architecture
 This application uses MVVM pattern, with Dagger Hilt Dependency Injection.
 Using `DiffUtil` to calculate updates for a RecyclerView Adapter instead of using `notifyDataSetChanged`. Make it more efficient.
+Separated gradle file makes dependencies easy to be managed.
 
 ## Note
 If you want to build and run this app.

@@ -35,13 +35,13 @@ def deps = [
 
         'daggerHilt'   : [
                 'runtime' : "com.google.dagger:hilt-android:$versions.daggerHilt",
-                'compiler': "com.google.dagger:hilt-android-compiler:$versions.daggerHilt"
+                'compiler': "com.google.dagger:hilt-android-compiler:$versions.daggerHilt",
+                'fragment': "androidx.navigation:navigation-fragment-ktx:2.4.2"
         ],
 
         'coroutines'   : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines",
         'retrofit'     : "com.squareup.retrofit2:retrofit:$versions.retrofit",
         'gsonConverter': "com.squareup.retrofit2:converter-gson:$versions.retrofit",
-
 ]
 
 ext.deps = deps
