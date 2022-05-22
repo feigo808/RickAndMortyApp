@@ -13,7 +13,7 @@ import com.feiyatsu.rickandmortyapp.network.model.Character
 class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>() {
 
     //    private var characters: MutableList<Character> = mutableListOf()
-    private var characters: List<Character> = ArrayList()
+    private var characters: MutableList<Character> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder =
         CharacterViewHolder(
@@ -33,7 +33,7 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
 
     fun addCharacters(fetchedCharacters: List<Character>) {
         val oldList = characters
-        characters = fetchedCharacters
+        characters = fetchedCharacters.toMutableList()
 
         val diffResult: DiffUtil.DiffResult = DiffUtil.calculateDiff(
             CharactersDiffUtil(

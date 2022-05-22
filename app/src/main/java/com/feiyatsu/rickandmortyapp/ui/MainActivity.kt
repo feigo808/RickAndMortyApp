@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.feiyatsu.rickandmortyapp.R
 import com.feiyatsu.rickandmortyapp.databinding.ActivityMainBinding
 import com.feiyatsu.rickandmortyapp.network.data.NetworkResource
 import dagger.hilt.android.AndroidEntryPoint
